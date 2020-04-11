@@ -1,0 +1,38 @@
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+.backgroundwrap {
+    position: fixed;
+    top: 50;
+    left: 50;
+    right: 60;
+    bottom: 60;
+    width: 90%;
+    height: 90%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    color: rgba(224, 93, 137, 0.822);
+    top: 0;
+    left: 0;
+    font-family: 'Galada', cursive;
+}
+.content h1 {
+    text-align: center;
+    font-size: 78px;
+    margin-top: 150px;
+    word-spacing: 20px;
+    letter-spacing: 3px;
+
+}
+.content p {
+    text-align: center;
+    font-size: 48px;
+    padding: 30px;
+}
