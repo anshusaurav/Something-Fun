@@ -52,52 +52,56 @@ body{
     font-size: 16px;
     background-color: rgba(26, 19, 69, 0.22);
 }
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
 .video-bg {
     border-radius: 48px;
     margin: 0.75rem 0;
     max-height: 708px;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    /* border: 1px solid black; */
 }
 .backgroundwrap {
-    width:100%;
+    /* width:100%; */
     border-radius: 48px;
+    /* z-index: -1000; */
 }
-.container{
-    max-width: 660px;
-    margin: 0 auto;
-    max-height: 600px;
-}
+
 .content {
-    width: 100%;
     position: absolute;
-    color: rgba(26, 19, 69, 0.822);
     top: 0;
-    left: 0;
-    z-index: 10;
+    color: rgba(26, 19, 69, 0.822);
+    /* z-index: 1000; */
     font-weight: 800;
+    margin: 0 auto;
     font-family: "Montserrat", serif;
 }
+.inner-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .side-buttons{
-    position: relative;
-    top: 320px;
-    left: 0;
     display: flex;
 }
 .content h1 {
-    text-align: center;
-    font-size: 78px;
+    /* text-align: center; */
+    font-size: 40px;
     font-weight: 800;
-    margin-top: 150px;
+    /* margin-top: 150px; */
     word-spacing: 20px;
     letter-spacing: 3px;
 
 }
 .content p {
-    text-align: center;
+    /* text-align: center; */
     font-size: 22px;
     font-weight: 600;
-    padding: 30px;
+    /* padding: 30px; */
     word-break: break-all;
 }
 .content button:hover{
