@@ -1,12 +1,67 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*CSS added by Me*/
+body{
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: rgba(26, 19, 69, 0.22);
+}
 .video-bg {
-    
-    height: 100%;
+    border-radius: 48px;
+    margin: 0.75rem 0;
+    max-height: 708px;
     width: 100%;
     object-fit: contain;
 }
 .backgroundwrap {
-    max-height:2%;
     width:100%;
+    border-radius: 48px;
 }
 .container{
     max-width: 660px;
@@ -23,6 +78,12 @@
     font-weight: 800;
     font-family: "Montserrat", serif;
 }
+.side-buttons{
+    position: relative;
+    top: 320px;
+    left: 0;
+    display: flex;
+}
 .content h1 {
     text-align: center;
     font-size: 78px;
@@ -34,9 +95,10 @@
 }
 .content p {
     text-align: center;
-    font-size: 48px;
+    font-size: 22px;
     font-weight: 600;
     padding: 30px;
+    word-break: break-all;
 }
 .content button:hover{
     scale: 1.6;
