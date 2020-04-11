@@ -83,22 +83,36 @@ body{
     font-family: "Montserrat", serif;
 }
 .inner-content{
-    
+    padding: 8px;
     display: grid;
-    /* grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr); */
-    grid-template-areas:  
-                         '. . . . . . . .'
+    /* grid-template-columns: 450px 60px 70px 70px; */
+    /* grid-template-rows: repeat(8, 1fr);  */
+    grid-template-areas: 't t t t t t t t'  
+                         't t t t t t t t'  
+                         '. . . . . . . a' 
                          '. . . . . . . a'
-                         '. . . . . . . .'
+                         '. . . . . . . a'
                          'b b b b b b b b'
                          'c c c c c c c c';
-
+    justify-content: space-between;
+    
+}
+.hide{
+    display: none;
+}
+.topper{
+    min-height: 380px;
+    grid-area: t;
 }
 .side-buttons{
     
-    margin-top: 400px;
     grid-area: a;
+    display: grid;
+    grid-template-areas:'f'
+                        's'
+                        't';
+    justify-content: space-between;
+    grid-gap: 4px;
 }
 .intro-content{
     grid-area: b;
@@ -124,4 +138,44 @@ body{
 }
 .content button:hover{
     scale: 1.6;
+}
+.first-btn{
+    width: 32px;
+    height: 32px;
+    grid-area: f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid hotpink; */
+}
+.fa-heart{
+    /* justify-self: center; */
+    align-self: center;
+}
+.second-btn{
+    width: 32px;
+    height: 32px;
+    grid-area: s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid hotpink; */
+}
+.fa-share-alt{
+    align-self: center;
+}
+.third-btn{
+    width: 32px;
+    height: 32px;
+    grid-area: t;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid hotpink; */
+}
+.fa-vr-cardboard{
+    align-self: center;
+}
+.fas{
+    font-size: 24px;
 }
