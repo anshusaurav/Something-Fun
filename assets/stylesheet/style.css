@@ -80,6 +80,8 @@ body{
     
     /* margin: 0 auto; */
     max-width: 400px;
+    min-width: 100%;
+    padding: 0 28px;
     font-family: "Montserrat", serif;
 }
 .inner-content{
@@ -90,9 +92,9 @@ body{
     /* grid-template-rows: repeat(8, 1fr);  */
     grid-template-areas: 't t t t t t t t'  
                          't t t t t t t t'  
-                         '. . . . . . . a' 
-                         '. . . . . . . a'
-                         '. . . . . . . a'
+                         'a a a a a a a a' 
+                         'a a a a a a a a'
+                         'a a a a a a a a'
                          'b b b b b b b b'
                          'c c c c c c c c';
     justify-content: space-between;
@@ -106,15 +108,16 @@ body{
     grid-area: t;
 }
 .side-buttons{
-    
+    width: 100%;
     grid-area: a;
     display: grid;
-    grid-template-areas:'f'
-                        's'
-                        't';
+    grid-template-areas: '. . . . . . f'
+                         '. . . . . . s'
+                         '. . . . . . t';
     justify-content: space-between;
     grid-gap: 4px;
-    margin-right: 12px;
+    /* margin-right: 12px; */
+    /* background-color: #519234; */
 }
 .intro-content{
     grid-area: b;
@@ -160,12 +163,12 @@ body{
 .follow-btn {
     margin-left: 8px;
     background-color: transparent;
-    color: #ED2B33FF;
+    color: rgb(154, 28, 32);
     text-transform: uppercase;
     border-radius: 6px;
     font-size: 12px;
     font-weight: 600;
-    border: 2px solid #ED2B33FF;
+    border: 2px solid rgb(154, 28, 32);
     font-family: "Montserrat", serif;
     cursor: pointer;
 }
@@ -192,6 +195,15 @@ body{
 .desc-content{
     grid-area: c;
 }
+.desc-content p {
+    /* text-align: center; */
+    /* font-size: 22px; */
+    font-weight: 400;
+    font-size: 12px;
+    color:whitesmoke;
+    /* padding: 30px; */
+    word-break: break-all;
+}
 .content h1 {
     /* text-align: center; */
     font-size: 40px;
@@ -201,13 +213,7 @@ body{
     letter-spacing: 3px;
 
 }
-.content p {
-    /* text-align: center; */
-    /* font-size: 22px; */
-    font-weight: 600;
-    /* padding: 30px; */
-    word-break: break-all;
-}
+
 .content button:hover{
     scale: 1.6;
 }
@@ -250,4 +256,5 @@ body{
 }
 .fas{
     font-size: 24px;
+    color: white;
 }
