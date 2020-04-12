@@ -79,6 +79,7 @@ body{
     /* z-index: 1000; */
     
     /* margin: 0 auto; */
+    padding: 0 16px 0 26px;
     max-width: 400px;
     font-family: "Montserrat", serif;
 }
@@ -206,7 +207,7 @@ body{
     /* font-size: 22px; */
     font-weight: 500;
     font-size: 14px;
-    color: darkgrey;
+    color: rgb(221, 215, 215,0.8);
     /* padding: 30px; */
     word-break: break-all;
 }
@@ -214,12 +215,20 @@ body{
     scale: 1.6;
 }
 .first-btn{
-    width: 32px;
-    height: 32px;
     grid-area: f;
+    width: 40px;
+    height: 40px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    /* //background-color:transparent; */
+    border: 0.5px solid #ccc;
+    opacity: 0.5;
+    margin-bottom: 6px;
+    border: 1px solid hotpink;
+    background: #3f3d3d;
     /* border: 1px solid hotpink; */
 }
 .fa-heart{
@@ -227,24 +236,42 @@ body{
     align-self: center;
 }
 .second-btn{
-    width: 32px;
-    height: 32px;
+    
     grid-area: s;
+    width: 40px;
+    height: 40px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    /* //background-color:transparent; */
+    border: 0.5px solid #ccc;
+    opacity: 0.5;
+    margin-bottom: 6px;
+    border: 1px solid hotpink;
+    background: #3f3d3d;
     /* border: 1px solid hotpink; */
 }
 .fa-share-alt{
     align-self: center;
 }
 .third-btn{
-    width: 32px;
-    height: 32px;
+    
     grid-area: t;
+    width: 40px;
+    height: 40px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    /* //background-color:transparent; */
+    border: 0.5px solid #ccc;
+    opacity: 0.5;
+    margin-bottom: 6px;
+    border: 1px solid hotpink;
+    background: #3f3d3d;
     /* border: 1px solid hotpink; */
 }
 .fa-vr-cardboard{
