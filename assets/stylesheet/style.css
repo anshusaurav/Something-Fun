@@ -85,6 +85,7 @@ body{
 .inner-content{
     padding: 8px;
     display: grid;
+    min-width: 100%;
     /* grid-template-columns: 450px 60px 70px 70px; */
     /* grid-template-rows: repeat(8, 1fr);  */
     grid-template-areas: 't t t t t t t t'  
@@ -113,9 +114,66 @@ body{
                         't';
     justify-content: space-between;
     grid-gap: 4px;
+    margin-right: 12px;
 }
 .intro-content{
     grid-area: b;
+    display: grid;
+    grid-template-areas: 'i o o o o o'
+                         'i p p p p p';
+
+}
+.user-img-div{
+    grid-area: i;
+    /* border: 1px solid olive; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+}
+.img-circle{
+    width: 80%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-img{
+    max-width: 48px;
+    opacity: 0.8;
+    border-radius: 50%;
+    /* border: 4px solid tomato; */
+}
+.user-info-one{
+    grid-area: o;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid rgb(14, 117, 128); */
+}
+.user-name{
+    font-weight: 700;
+    color: white;
+}
+.follow-btn {
+    margin-left: 8px;
+    background-color: transparent;
+    color: #ED2B33FF;
+    text-transform: uppercase;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 2px solid #ED2B33FF;
+    font-family: "Montserrat", serif;
+    cursor: pointer;
+}
+
+
+.user-info-two{
+    grid-area: p;
+    /* border: 1px solid rgb(231, 231, 126); */
 }
 .desc-content{
     grid-area: c;
