@@ -50,6 +50,7 @@ table {
 body{
     line-height: 1.5;
     font-size: 16px;
+    margin: 0 auto;
     background-color: rgba(26, 19, 69, 0.22);
 }
 .container{
@@ -73,7 +74,7 @@ body{
 
 .content {
     position: absolute;
-    min-height: 720px;
+    min-height: 680px;
     top: 0;
     color: rgba(208, 204, 230, 0.822);
     /* z-index: 1000; */
@@ -87,6 +88,7 @@ body{
     padding: 8px;
     display: grid;
     min-width: 100%;
+    min-height: 100%;
     /* grid-template-columns: 450px 60px 70px 70px; */
     /* grid-template-rows: repeat(8, 1fr);  */
     grid-template-areas: 't t t t t t t t'  
@@ -103,7 +105,7 @@ body{
     display: none;
 }
 .topper{
-    min-height: 380px;
+    min-height: 440px;
     grid-area: t;
 }
 .side-buttons{
