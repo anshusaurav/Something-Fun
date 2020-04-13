@@ -282,3 +282,22 @@ body{
 .fas{
     font-size: 24px;
 }
+.first-btn .tooltiptext, .second-btn .tooltiptext, .third-btn .tooltiptext{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    text-transform: uppercase;
+    /* Position the tooltip */
+    position: relative;
+    left: -20px;
+    top: -20px;
+    z-index: 1;
+  }
+  
+  .first-btn:hover .tooltiptext, .second-btn:hover .tooltiptext, .third-btn:hover .tooltiptext {
+    visibility: visible;
+  }
