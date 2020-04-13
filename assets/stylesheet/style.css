@@ -104,7 +104,8 @@ body{
 .prev-content, .next-content{
     position: absolute;
     min-height: 240px;
-    color: rgba(35, 35, 39, 0.822);
+    
+    color: rgba(221, 221, 231, 0.822);
     /* z-index: 1000; */
     
     /* margin: 0 auto; */

@@ -5,3 +5,29 @@ videoArr = [
             {id: 4, username: 'Snares Penguin', userimg: 'assets\media\image-4.png', videourl: 'assets/media/clip-4.mp4', gamename: 'Boneworks', parlorname: 'MK2 VR', descone:'Had so much fun at the arcade', desctwo: 'Checkout game on steam. '},
             {id: 5, username: 'Emperor Penguin', userimg: 'assets\media\image-5.png', videourl: 'assets/media/clip-5.mp4', gamename: 'Counter-Fight', parlorname: 'VivianVR', descone:'Had so much fun at the arcade', desctwo: 'Checkout game on steam. '},
             ];
+//https://codepen.io/butlerx/details/xgGaWr
+
+let sliderIndex = 0;
+function plusDiv(shiftNum){
+    sliderIndex += shiftNum;
+    sliderIndex %= videoArr;
+}
+let rightElem = document.querySelector('.next-video');
+let leftElm = document.querySelector('.prev-video');
+rightElem.addEventListener('click', next);
+leftElem.addEventListener('click', previous);
+
+function next(event){
+    if(sliderIndex == videoArr.length -1)
+        sliderIndex = 0;
+    else
+        sliderIndex++;
+    console.log(sliderIndex);
+}
+function previous(event){
+    if(sliderIndex == 0)
+        sliderIndex = videoArr.length-1;
+    else
+        sliderIndex--;
+    console.log(sliderIndex);
+}
