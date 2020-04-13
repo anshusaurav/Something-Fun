@@ -69,7 +69,7 @@ body{
     justify-content: center;
     align-items: center;
     opacity: 0.60;
-    cursor: pointer;
+    
     /* background-color: darkmagenta; */
 }
 .prev-video:hover, .next-video:hover{
@@ -131,7 +131,10 @@ body{
     max-width: 400px;
     font-family: "Montserrat", serif;
 }
-
+.prev-content, .next-content{
+    height: ;
+    cursor: pointer;
+}
 .pre-content p, .next-content p{
     opacity: 1;
 }

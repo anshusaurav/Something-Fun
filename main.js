@@ -12,12 +12,14 @@ function plusDiv(shiftNum){
     sliderIndex += shiftNum;
     sliderIndex %= videoArr;
 }
-let rightElem = document.querySelector('.next-video');
-let leftElm = document.querySelector('.prev-video');
+let rightElem = document.querySelector('.left-arrow');
+let leftElem = document.querySelector('.right-arrow');
 rightElem.addEventListener('click', next);
 leftElem.addEventListener('click', previous);
 
 function next(event){
+    event.preventDefault();
+    console.log('dsdas');
     if(sliderIndex == videoArr.length -1)
         sliderIndex = 0;
     else
@@ -25,6 +27,8 @@ function next(event){
     console.log(sliderIndex);
 }
 function previous(event){
+    event.preventDefault();
+    console.log('dsdas');
     if(sliderIndex == 0)
         sliderIndex = videoArr.length-1;
     else
