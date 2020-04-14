@@ -18,9 +18,22 @@ let descElem = document.querySelector('.desc-content');
 let videoElem = document.querySelector('.video-bg');
 let prevVidElem = document.querySelector('.video-prev');
 let nextVidElem = document.querySelector('.video-next');
+let mql = window.matchMedia('(max-width: 800px)');
+
 rightElem.addEventListener('click', next);
 leftElem.addEventListener('click', previous);
-
+mql.addListener(handleWidthChange);
+function handleWidthChange(event) {
+    if(event.matches){
+        prevVidElem.visibility = 'visible';
+        nextVidElem.visibility = 'hidden';
+        console.log('Yes');
+    }
+    else
+    {
+        console.log('No');
+    }
+}
 function next(event){
     //event.preventDefault();
     console.log('dsdas');
