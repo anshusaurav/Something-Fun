@@ -8,9 +8,9 @@ videoArr = [
 //https://codepen.io/butlerx/details/xgGaWr
 
 let sliderIndex = 0;
-let preIn = 1;
-let postIn = videoArr.length-1;
-
+let preIn = videoArr.length-1;
+let postIn = 1;
+console.log(videoArr);  
 let rightElem = document.querySelector('.right-arrow');
 let leftElem = document.querySelector('.left-arrow');
 let introElem = document.querySelector('.intro-content');
@@ -24,20 +24,30 @@ leftElem.addEventListener('click', previous);
 function next(event){
     //event.preventDefault();
     console.log('dsdas');
+    preIn = sliderIndex;
     sliderIndex++;
     if(sliderIndex == videoArr.length)
         sliderIndex = 0;
+    
     console.log(sliderIndex);
+    
+    postIn = sliderIndex + 1;
+    if(postIn == videoArr.length)
+        postIn = 0;
     loadNewSliders(sliderIndex);
 }
 function previous(event){
     //event.preventDefault();
     console.log('dsdas');
+    postIn = sliderIndex;
     if(sliderIndex == 0)
         sliderIndex = videoArr.length-1;
     else
         sliderIndex--;
     console.log(sliderIndex);
+    postIn = sliderIndex - 1;
+    if(postIn == -1)
+        postIn = videoArr.length-1;
     loadNewSliders(sliderIndex);
 }
 function loadNewSliders(sliderIndex){
@@ -67,12 +77,7 @@ function loadNewSliders(sliderIndex){
    `<p>${videoArr[sliderIndex].descone}</p>
     <p>${videoArr[sliderIndex].desctwo}</p>  `;
     videoElem.setAttribute('src', videoArr[sliderIndex].videourl);
-    preIn = sliderIndex+1;
-    if(preIn < 0)
-        preIn = videoArr.length-1;
-    postIn = sliderIndex-1;
-    if(postIn >= videoArr.length)
-        postIn = 0;
+    
     console.log(preIn, postIn);
     prevVidElem.setAttribute('src', videoArr[preIn].videourl );
     nextVidElem.setAttribute('src', videoArr[postIn].videourl );
