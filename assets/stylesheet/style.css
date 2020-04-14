@@ -54,7 +54,7 @@ body{
     background-color: rgba(26, 19, 69, 0.22);
 }
 .full-container{
-    border:1px solid khaki;
+    /* border:1px solid khaki; */
     max-width: 800px;
     min-width: 800px;
     max-height: 720px;

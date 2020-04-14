@@ -40,8 +40,10 @@ function handleWidthChange(event) {
         console.log('No');
     }
 }
+videoElem.addEventListener('ended',next);
 function next(event){
     //event.preventDefault();
+
     console.log('dsdas');
     preIn = sliderIndex;
     sliderIndex++;
