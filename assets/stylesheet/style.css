@@ -54,8 +54,11 @@ body{
     background-color: rgba(26, 19, 69, 0.22);
 }
 .full-container{
-    /* border:1px solid khaki; */
+    border:1px solid khaki;
     max-width: 800px;
+    min-width: 800px;
+    max-height: 720px;
+    min-height: 720px;
     margin: 0 auto;
     display:grid;
     justify-content: space-between;
@@ -63,13 +66,16 @@ body{
     align-items: center;
 }
 .prev-video, .next-video{
-    height: 240px;
+    min-height: 240px;
+    min-width: 132px;
+    max-width: 132px;
+    max-height: 240px;
     /* //border: 1px solid indigo; */
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0.60;
-    
+    margin: 0 auto;
     /* background-color: darkmagenta; */
 }
 .prev-video:hover, .next-video:hover{
