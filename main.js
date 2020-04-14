@@ -10,12 +10,9 @@ videoArr = [
 let sliderIndex = 0;
 let preIn = 1;
 let postIn = videoArr.length-1;
-function plusDiv(shiftNum){
-    sliderIndex += shiftNum;
-    sliderIndex %= videoArr;
-}
-let rightElem = document.querySelector('.left-arrow');
-let leftElem = document.querySelector('.right-arrow');
+
+let rightElem = document.querySelector('.right-arrow');
+let leftElem = document.querySelector('.left-arrow');
 let introElem = document.querySelector('.intro-content');
 let descElem = document.querySelector('.desc-content');
 let videoElem = document.querySelector('.video-bg');
@@ -25,17 +22,16 @@ rightElem.addEventListener('click', next);
 leftElem.addEventListener('click', previous);
 
 function next(event){
-    event.preventDefault();
+    //event.preventDefault();
     console.log('dsdas');
-    if(sliderIndex == videoArr.length -1)
+    sliderIndex++;
+    if(sliderIndex == videoArr.length)
         sliderIndex = 0;
-    else
-        sliderIndex++;
     console.log(sliderIndex);
     loadNewSliders(sliderIndex);
 }
 function previous(event){
-    event.preventDefault();
+    //event.preventDefault();
     console.log('dsdas');
     if(sliderIndex == 0)
         sliderIndex = videoArr.length-1;
@@ -67,7 +63,7 @@ function loadNewSliders(sliderIndex){
                 </span>
             </p>
     </div>`
-    descElem = innerHTML = 
+    descElem.innerHTML = 
    `<p>${videoArr[sliderIndex].descone}</p>
     <p>${videoArr[sliderIndex].desctwo}</p>  `;
     videoElem.setAttribute('src', videoArr[sliderIndex].videourl);
