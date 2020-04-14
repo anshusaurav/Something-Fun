@@ -11,6 +11,8 @@ let sliderIndex = 0;
 let preIn = videoArr.length-1;
 let postIn = 1;
 console.log(videoArr);  
+
+let contElem = document.querySelector('.container');
 let rightElem = document.querySelector('.right-arrow');
 let leftElem = document.querySelector('.left-arrow');
 let introElem = document.querySelector('.intro-content');
@@ -18,6 +20,8 @@ let descElem = document.querySelector('.desc-content');
 let videoElem = document.querySelector('.video-bg');
 let prevVidElem = document.querySelector('.video-prev');
 let nextVidElem = document.querySelector('.video-next');
+let prevVidDiv = document.querySelector('.prev-video');
+let nextVidDiv = document.querySelector('.next-video');
 let mql = window.matchMedia('(max-width: 800px)');
 
 rightElem.addEventListener('click', next);
@@ -25,12 +29,14 @@ leftElem.addEventListener('click', previous);
 mql.addListener(handleWidthChange);
 function handleWidthChange(event) {
     if(event.matches){
-        prevVidElem.visibility = 'visible';
-        nextVidElem.visibility = 'hidden';
+        prevVidDiv.style.display = 'none';
+        nextVidDiv.style.display = 'none';
         console.log('Yes');
     }
     else
     {
+        prevVidDiv.style.display = 'flex';
+        nextVidDiv.style.display = 'flex';
         console.log('No');
     }
 }

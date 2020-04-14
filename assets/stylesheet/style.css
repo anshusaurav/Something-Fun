@@ -84,15 +84,20 @@ body{
     /* border: 1px solid black; */
 }
 .container{
-    max-width: 400px;
+    max-height: 720px;
+    min-height: 720px;
+    min-width: 400px;
     margin: 0 auto;
+    max-width: 400px;
     /* border: 1px solid black; */
 }
 .video-bg {
+    min-height: 720px;
     border-radius: 24px;
     margin: 0.75rem 0;
+    min-width: 400px;
+    max-width: 400px;
     max-height: 720px;
-    /* width: 100%; */
     object-fit: cover;
     /* border: 1px solid black; */
 }
