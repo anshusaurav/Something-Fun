@@ -199,7 +199,7 @@ body{
                          '. . . . . . . a' 
                          '. . . . . . . a'
                          '. . . . . . . a'
-                         'b b b b b b b b'
+                         'b b b b b b b a'
                          'c c c c c c c c';
     justify-content: space-between;
     
@@ -208,7 +208,7 @@ body{
     display: none;
 }
 .topper{
-    min-height: 380px;
+    min-height: 400px;
     grid-area: t;
 }
 .side-buttons{
@@ -261,7 +261,8 @@ body{
 }
 .user-name{
     font-weight: 700;
-    color: white;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 1px  rgb(64, 6, 6)
 }
 .follow-btn {
     margin-left: 8px;

@@ -53,7 +53,7 @@ function handleWidthChange(event) {
         console.log('No');
     }
 }
-//videoElem.addEventListener('ended',next);
+// videoElem.addEventListener('ended',next);
 function next(event){
     //event.preventDefault();
 
