@@ -51,8 +51,9 @@ body{
     line-height: 1.5;
     font-size: 16px;
     margin: 0 auto;
-    background-color: rgba(26, 19, 69, 0.22);
+    background-color: rgb(0, 0, 0);
 }
+
 .full-container{
     /* border:1px solid khaki; */
     max-width: 800px;
@@ -102,37 +103,43 @@ body{
     position: absolute;
     /* top: 0;  */
     /* border-radius: 24px; */
-    margin: 0.75rem 0;
+    /* margin: 0.75rem 0; */
     min-width: 400px;
     max-width: 400px;
     max-height: 700px;
     object-fit: contain;
+    display: block;
     z-index: -10;
     /* border: 1px solid rgb(199, 37, 177); */
+    box-sizing: border-box;
 }
 
 .backgroundwrap {
     /* width:100%; */
     /* border: 1px solid rgb(12, 137, 172); */
     /* border-radius: 24px; */
-    min-height: 720px;
+    min-height: 700px;
     min-width: 400px;
     max-width: 400px;
-    max-height: 720px;
+    max-height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 
     /* background: linear-gradient(0deg,rgba(0,0,0,.8),transparent 320px); */
     /* z-index: -1000; */
 }
 .gradient {
     /* border: 1px solid rgb(214, 187, 34); */
-    background-image: linear-gradient(0deg,rgba(0,0,0,.8),transparent 320px);
+    background-image: linear-gradient(0deg,rgba(4, 3, 3, 0.8),transparent 320px);
     min-width: 400px;
     max-width: 400px;
     max-height: 720px;
     min-height: 720px;
+    box-sizing: border-box;
+    /* top: 0; */
+    z-index: 2;
     object-fit: cover;
     position: absolute;
   }
@@ -286,6 +293,8 @@ body{
 .desc-content{
     grid-area: c;
     word-wrap: break-word;
+    color: rgb(255, 255, 255);
+    /* z-index: 1000;*/
 }
 .content h1 {
     /* text-align: center; */

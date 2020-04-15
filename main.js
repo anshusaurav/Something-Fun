@@ -103,3 +103,35 @@ function loadNewSliders(sliderIndex){
     prevVidElem.setAttribute('src', videoArr[preIn].videourl );
     nextVidElem.setAttribute('src', videoArr[postIn].videourl );
 }
+
+
+
+
+    function map(head, f) {
+        //console.log(head,f);
+        
+        if(head == null)
+            return null;
+        let x;
+        let arr = [];
+        
+        while(true){
+        x = head.data;
+        //    head.data = f(x);
+        arr.push(f(x));
+        //console.log(y);
+        if(head.next == null)
+            break;
+        else
+            head = head.next;
+        }
+        
+        let newHead = new Node(arr[0]);
+        for(let i  = 0; i < arr.length-1; i++){
+            newHead.data = arr[i];
+            newHead.next = new Node(arr[i+1]);
+        // newHead = newHead.next;
+        }
+        console.log(arr);
+        return newHead;
+        }
