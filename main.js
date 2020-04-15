@@ -79,9 +79,9 @@ function previous(event){
     else
         sliderIndex--;
     console.log(sliderIndex);
-    postIn = sliderIndex - 1;
-    if(postIn == -1)
-        postIn = videoArr.length-1;
+    preIn = sliderIndex - 1;
+    if(preIn == -1)
+        preIn = videoArr.length-1;
     loadNewSliders(sliderIndex);
 }
 function loadNewSliders(sliderIndex){
