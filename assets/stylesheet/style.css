@@ -196,6 +196,7 @@ body{
     /* grid-template-rows: repeat(8, 1fr);  */
     grid-template-areas: 't t t t t t t t'  
                          't t t t t t t t'  
+                         'p . . . . . . n'
                          '. . . . . . . a' 
                          '. . . . . . . a'
                          '. . . . . . . a'
@@ -228,6 +229,43 @@ body{
     grid-template-areas: 'i o o o o o'
                          'i p p p p p';
 
+}
+.next-inside{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 12px;
+    top: 320px;
+    grid-area: n;
+    min-width: 48px;
+    max-width: 48px;
+    min-height: 32px;
+    max-height: 32px;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgba(217, 135, 127, 0.85);
+    cursor: pointer;
+}
+
+.prev-inside{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 12px;
+    top: 320px;
+    grid-area: p;
+    min-width: 48px;
+    max-width: 48px;
+    min-height: 32px;
+    max-height: 32px;
+    font-size: 32px;
+    font-weight: 700;  
+    color: rgba(217, 135, 127, 0.85);
+    cursor: pointer;
 }
 .user-img-div{
     grid-area: i;

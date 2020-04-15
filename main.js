@@ -22,8 +22,8 @@ let prevVidElem = document.querySelector('.video-prev');
 let nextVidElem = document.querySelector('.video-next');
 let prevVidDiv = document.querySelector('.prev-video');
 let nextVidDiv = document.querySelector('.next-video');
-let pVidMainElem = document.querySelector('.container prev-video-wrapper');
-let nVidMainElem = document.querySelector('.container next-video-wrapper');
+let pVidMainElem = document.querySelector('.prev-inside');
+let nVidMainElem = document.querySelector('.next-inside');
 let mql = window.matchMedia('(max-width: 600px)');
 
 rightElem.addEventListener('click', next);
@@ -39,6 +39,8 @@ function handleWidthChange(event) {
         mainContElem.style.justifyContent ='center';
         mainContElem.style.maxWidth = '400px';
         mainContElem.style.minWidth = '360px';
+        pVidMainElem.style.visibility = 'visible';
+        nVidMainElem.style.visibility = 'visible';
         console.log('Yes');
     }
     else
@@ -50,6 +52,8 @@ function handleWidthChange(event) {
         mainContElem.style.maxWidth = '800px';
         mainContElem.style.minWidth = '800px';
         mainContElem.style.justifyContent ='space-between';
+        pVidMainElem.style.visibility = 'hidden';
+        nVidMainElem.style.visibility = 'hidden';
         console.log('No');
     }
 }
