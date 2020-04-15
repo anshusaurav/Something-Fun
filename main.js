@@ -6,7 +6,8 @@ videoArr = [
             {id: 5, username: 'Emperor Penguin', userimg: 'assets/media/image-5.png', videourl: 'assets/media/clip-5.mp4', gamename: 'Counter-Fight', parlorname: 'VivianVR', descone:'Had so much fun playing at VivianVR', desctwo: 'Checkout game on steam. '}
             ];
 //https://codepen.io/butlerx/details/xgGaWr
-
+//initial bug if smaller width
+//size fix for max-width media query calculate and assign proper size
 let sliderIndex = 0;
 let preIn = videoArr.length-1;
 let postIn = 1;
@@ -24,14 +25,27 @@ let prevVidDiv = document.querySelector('.prev-video');
 let nextVidDiv = document.querySelector('.next-video');
 let pVidMainElem = document.querySelector('.prev-inside');
 let nVidMainElem = document.querySelector('.next-inside');
-let mql = window.matchMedia('(max-width: 600px)');
-
+let mql = window.matchMedia('(max-width: 728px)');
+console.dir(window.innerWidth);
+if(window.innerWidth < 728){
+    prevVidDiv.style.display = 'none';
+    nextVidDiv.style.display = 'none';
+    mainContElem.style.display = 'flex'
+    mainContElem.style.alignItems ='center';
+    mainContElem.style.justifyContent ='center';
+    mainContElem.style.maxWidth = '400px';
+    mainContElem.style.minWidth = '360px';
+    pVidMainElem.style.visibility = 'visible';
+    nVidMainElem.style.visibility = 'visible';
+    console.log('Yes');
+}
 rightElem.addEventListener('click', next);
 leftElem.addEventListener('click', previous);
 nVidMainElem.addEventListener('click', next)
 pVidMainElem.addEventListener('click', previous);
 mql.addListener(handleWidthChange);
 function handleWidthChange(event) {
+    console.dir(window.innerWidth);
     if(event.matches){
         prevVidDiv.style.display = 'none';
         nextVidDiv.style.display = 'none';
@@ -43,6 +57,7 @@ function handleWidthChange(event) {
         pVidMainElem.style.visibility = 'visible';
         nVidMainElem.style.visibility = 'visible';
         console.log('Yes');
+        
     }
     else
     {
@@ -56,6 +71,7 @@ function handleWidthChange(event) {
         pVidMainElem.style.visibility = 'hidden';
         nVidMainElem.style.visibility = 'hidden';
         console.log('No');
+        
     }
 }
 videoElem.addEventListener('ended',next);
