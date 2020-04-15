@@ -67,6 +67,9 @@ body{
     align-items: center;
 }
 .prev-video, .next-video{
+    background-image: url("assets\media\giphy.gif");
+    background-repeat: none;
+    object-fit: cover;
     min-height: 240px;
     min-width: 132px;
     max-width: 132px;
@@ -126,7 +129,9 @@ body{
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-
+    background-image: url("assets\media\giphy.gif");
+    background-repeat: none;
+    object-fit: cover;
     /* background: linear-gradient(0deg,rgba(0,0,0,.8),transparent 320px); */
     /* z-index: -1000; */
 }
@@ -214,7 +219,7 @@ body{
                         's'
                         't';
     justify-content: space-between;
-    grid-gap: 18px;
+    grid-gap: 10px;
     margin-right: 8px;
 }
 .intro-content{

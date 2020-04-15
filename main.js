@@ -11,7 +11,7 @@ let sliderIndex = 0;
 let preIn = videoArr.length-1;
 let postIn = 1;
 console.log(videoArr);  
-
+let mainContElem = document.querySelector('.full-container');
 let contElem = document.querySelector('.container');
 let rightElem = document.querySelector('.right-arrow');
 let leftElem = document.querySelector('.left-arrow');
@@ -22,7 +22,9 @@ let prevVidElem = document.querySelector('.video-prev');
 let nextVidElem = document.querySelector('.video-next');
 let prevVidDiv = document.querySelector('.prev-video');
 let nextVidDiv = document.querySelector('.next-video');
-let mql = window.matchMedia('(max-width: 800px)');
+let pVidMainElem = document.querySelector('.container prev-video-wrapper');
+let nVidMainElem = document.querySelector('.container next-video-wrapper');
+let mql = window.matchMedia('(max-width: 600px)');
 
 rightElem.addEventListener('click', next);
 leftElem.addEventListener('click', previous);
@@ -31,12 +33,20 @@ function handleWidthChange(event) {
     if(event.matches){
         prevVidDiv.style.display = 'none';
         nextVidDiv.style.display = 'none';
+        mainContElem.style.display = 'flex'
+        mainContElem.style.alignItems ='center';
+        mainContElem.style.justifyContent ='center';
+        mainContElem.style.maxWidth = '400px';
+        mainContElem.style.minWidth = '400px';
         console.log('Yes');
     }
     else
     {
         prevVidDiv.style.display = 'flex';
         nextVidDiv.style.display = 'flex';
+        contElem.style.margin= '0 auto';
+        mainContElem.style.display = 'grid'
+        mainContElem.style.justifyContent ='space-between';
         console.log('No');
     }
 }
@@ -103,35 +113,3 @@ function loadNewSliders(sliderIndex){
     prevVidElem.setAttribute('src', videoArr[preIn].videourl );
     nextVidElem.setAttribute('src', videoArr[postIn].videourl );
 }
-
-
-
-
-    function map(head, f) {
-        //console.log(head,f);
-        
-        if(head == null)
-            return null;
-        let x;
-        let arr = [];
-        
-        while(true){
-        x = head.data;
-        //    head.data = f(x);
-        arr.push(f(x));
-        //console.log(y);
-        if(head.next == null)
-            break;
-        else
-            head = head.next;
-        }
-        
-        let newHead = new Node(arr[0]);
-        for(let i  = 0; i < arr.length-1; i++){
-            newHead.data = arr[i];
-            newHead.next = new Node(arr[i+1]);
-        // newHead = newHead.next;
-        }
-        console.log(arr);
-        return newHead;
-        }
