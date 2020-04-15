@@ -28,6 +28,7 @@ let mql = window.matchMedia('(max-width: 600px)');
 
 rightElem.addEventListener('click', next);
 leftElem.addEventListener('click', previous);
+
 mql.addListener(handleWidthChange);
 function handleWidthChange(event) {
     if(event.matches){
@@ -37,7 +38,7 @@ function handleWidthChange(event) {
         mainContElem.style.alignItems ='center';
         mainContElem.style.justifyContent ='center';
         mainContElem.style.maxWidth = '400px';
-        mainContElem.style.minWidth = '400px';
+        mainContElem.style.minWidth = '360px';
         console.log('Yes');
     }
     else
@@ -45,12 +46,14 @@ function handleWidthChange(event) {
         prevVidDiv.style.display = 'flex';
         nextVidDiv.style.display = 'flex';
         contElem.style.margin= '0 auto';
-        mainContElem.style.display = 'grid'
+        mainContElem.style.display = 'grid';
+        mainContElem.style.maxWidth = '800px';
+        mainContElem.style.minWidth = '800px';
         mainContElem.style.justifyContent ='space-between';
         console.log('No');
     }
 }
-videoElem.addEventListener('ended',next);
+//videoElem.addEventListener('ended',next);
 function next(event){
     //event.preventDefault();
 
