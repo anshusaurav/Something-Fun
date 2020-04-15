@@ -245,8 +245,9 @@ body{
     max-height: 32px;
     font-size: 32px;
     font-weight: 700;
-    color: rgba(217, 135, 127, 0.85);
+    color: rgba(217, 135, 127, 0.55);
     cursor: pointer;
+    z-index: 20;
 }
 
 .prev-inside{
@@ -264,8 +265,9 @@ body{
     max-height: 32px;
     font-size: 32px;
     font-weight: 700;  
-    color: rgba(217, 135, 127, 0.85);
+    color: rgba(217, 135, 127, 0.55);
     cursor: pointer;
+    z-index: 20;
 }
 .user-img-div{
     grid-area: i;

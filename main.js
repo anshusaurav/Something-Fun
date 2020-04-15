@@ -28,7 +28,8 @@ let mql = window.matchMedia('(max-width: 600px)');
 
 rightElem.addEventListener('click', next);
 leftElem.addEventListener('click', previous);
-
+nVidMainElem.addEventListener('click', next)
+pVidMainElem.addEventListener('click', previous);
 mql.addListener(handleWidthChange);
 function handleWidthChange(event) {
     if(event.matches){
